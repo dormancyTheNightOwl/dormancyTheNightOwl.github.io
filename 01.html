@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            overflow: hidden;
+            background: url('img/wall.jpg');
+        }
+
+        .box {
+            margin: 10px auto;
+            width: 1200px;
+            height: 600px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .box1 {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            bottom: 80px;
+        }
+
+        .cle {
+            width: 100px;
+            height: 100px;
+            border: 40px solid black;
+            border-radius: 50%;
+            background-color: white;
+            border-left-color: red;
+            border-top-color: blueviolet;
+            border-right-color: yellowgreen;
+            border-bottom-color: lightsalmon;
+            position: absolute;
+            animation: tu 0.8s infinite linear;
+        }
+
+        .sm {
+            width: 70px;
+            height: 70px;
+            position: absolute;
+            top: 50%;
+            margin-top: -35px;
+            left: 50%;
+            margin-left: -35px;
+            border-radius: 50%;
+            background: radial-gradient(70px at center, greenyellow, skyblue, orange);
+            box-shadow: 0px 0px 20px orange;
+        }
+
+        .box:hover .box1 {
+            transition: all 3s;
+            transform: translate(1100px, -430px) scale(.2);
+        }
+
+        @keyframes tu {
+            from {}
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .img {
+            width: 50px;
+            height: 100px;
+            border: 40px solid red;
+            border-image: url('img/border-oil.jpg') 80;
+            background: url('img/ly.jpg') center/cover;
+            position: absolute;
+            right: -200px;
+        }
+
+        .box:hover .img {
+            transition: all 3s 7s;
+            transform: translate(-450px, 260px) rotate(360deg) scale(2.1);
+        }
+
+        .text-one {
+            position: absolute;
+            height: 38px;
+            font-size: 20px;
+            line-height: 38px;
+            left: -130px;
+            top: 80px;
+            color: greenyellow;
+            transition: all 1s 3s;
+        }
+
+        .text-two {
+            position: absolute;
+            height: 38px;
+            font-size: 20px;
+            line-height: 38px;
+            left: -100px;
+            top: 120px;
+            color: yellowgreen;
+
+            transition: all 1s 4s;
+        }
+
+        .text-three {
+            position: absolute;
+            height: 38px;
+            font-size: 20px;
+            line-height: 38px;
+            left: -150px;
+            top: 160px;
+            color: greenyellow;
+
+            transition: all 1s 5s;
+        }
+
+        .text-four {
+            position: absolute;
+            height: 38px;
+            font-size: 20px;
+            line-height: 38px;
+            left: -230px;
+            top: 200px;
+            color: yellowgreen;
+
+            transition: all 1s 6s;
+        }
+
+        .box:hover p.text-one {
+            transform: translate(300px);
+            text-shadow: -3px -3px 8px black;
+        }
+
+        .box:hover p.text-two {
+            transform: translate(320px) scale(1.2);
+            text-shadow: -3px -3px 8px black;
+        }
+
+        .box:hover p.text-three {
+            transform: translate(320px);
+            text-shadow: -3px -3px 8px black;
+        }
+
+        .box:hover p.text-four {
+            transform: translate(460px) scale(1.2);
+            text-shadow: -3px -3px 8px black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="box1">
+            <div class="cle">
+                <div class="sm"></div>
+            </div>
+        </div>
+        <div class="img"></div>
+        <p class="text-one">甲：有人吗？</p>
+        <p class="text-two">乙：没有</p>
+        <p class="text-three">甲：那有什么</p>
+        <p class="text-four">乙：有小姐姐,嘻嘻！！！</p>
+    </div>
+</body>
+
+</html>
